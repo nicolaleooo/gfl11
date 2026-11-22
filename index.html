@@ -564,6 +564,23 @@ em.mut{font-style:normal}
 .gd details.ch>p:last-child{margin-bottom:14px}
 
 .chip.on.g1{background:#1a9b4a;border-color:#1a9b4a;color:#fff}.chip.on.g2{background:#f5b301;border-color:#f5b301;color:#2a1d00}
+
+.hs{position:relative;display:inline-block}.hs i{position:absolute;left:0;top:0;width:50%;overflow:hidden;font-style:normal}
+
+.svr.c{display:block}.svh{display:flex;gap:10px;align-items:center}.svh .svi{flex:none}
+.svc{display:flex;gap:8px;margin-top:8px}.svc>div{flex:1;min-width:0}.svc>div+div{border-left:1px solid var(--border);padding-left:8px}
+.svl{font-size:12px;color:var(--muted);margin:0 0 2px}.svl b{font-weight:800}
+.svbtn.w{display:block;max-width:none;width:100%;margin-top:8px;align-self:auto}
+.svtop{display:flex;align-items:center;justify-content:center}
+.svt.top{background:linear-gradient(135deg,#f9e79a 0%,#d9a91c 52%,#f4d467 100%);color:#000;border:1px solid #b8860b;box-shadow:inset 0 1px 0 rgba(255,255,255,.65);font-size:12px;padding:4px 14px;letter-spacing:.3px;margin:0}
+
+.chip.on.g3{background:linear-gradient(90deg,#1a9b4a 50%,#f5b301 50%);border-color:#1a9b4a;color:#fff;text-shadow:0 0 2px #000}
+.gst{color:#d9a21b}
+
+.brow input.ro{background:transparent;border:none;color:inherit;pointer-events:none}
+.bch{gap:6px;margin:6px 0}
+.bch .chip{flex:1;text-align:center;padding:8px 2px;line-height:1.25}
+.bch .chip small{font-size:12px;opacity:.85}
 </style></head><body>
 <div id="app"><div id="hdr"></div><div id="main"></div><div id="nav"></div></div>
 <div id="ov"><div class="in" id="ovin"></div></div>
@@ -588,7 +605,7 @@ function esc(s){ return String(s).replace(/[&<>"']/g,function(c){return {"&":"&a
 (function(){ try{ ["gesturestart","gesturechange","gestureend"].forEach(function(e){ document.addEventListener(e,function(ev){ ev.preventDefault(); },{passive:false}); });
   }catch(e){} })();
 
-var APP_VER="1.0.94";
+var APP_VER="1.0.99";
 function pl(n,s,p){ return n+" "+(n===1?s:p); }
 
 const DATA_CLUBS=[{"id":"c01","n":"Paris Saint-Germain","s":"PSG","v":0,"div":"D1","c1":"#004170","c2":"#da291c"},{"id":"c02","n":"Barcelona","s":"BAR","v":0,"div":"D1","c1":"#a50044","c2":"#004d98"},{"id":"c03","n":"Real Madrid","s":"RMA","v":0,"div":"D1","c1":"#f2f2f2","c2":"#1a3a8a"},{"id":"c04","n":"Bayern München","s":"BAY","v":0,"div":"D1","c1":"#dc052d","c2":"#ffffff"},{"id":"c05","n":"Arsenal","s":"ARS","v":0,"div":"D1","c1":"#ef0107","c2":"#ffffff"},{"id":"c06","n":"Manchester City","s":"MCI","v":0,"div":"D1","c1":"#6cabdd","c2":"#1c2c5b"},{"id":"c07","n":"Liverpool","s":"LIV","v":0,"div":"D1","c1":"#c8102e","c2":"#f6eb61"},{"id":"c08","n":"Inter","s":"INT","v":0,"div":"D1","c1":"#0a3d91","c2":"#000000"},{"id":"c09","n":"Atletico Madrid","s":"ATM","v":0,"div":"D2","c1":"#cb3524","c2":"#ffffff"},{"id":"c10","n":"Manchester United","s":"MUN","v":0,"div":"D2","c1":"#da291c","c2":"#fbe122"},{"id":"c11","n":"Borussia Dortmund","s":"BVB","v":0,"div":"D2","c1":"#fde100","c2":"#000000"},{"id":"c12","n":"Chelsea","s":"CHE","v":0,"div":"D2","c1":"#034694","c2":"#ffffff"},{"id":"c13","n":"Milan","s":"MIL","v":0,"div":"D2","c1":"#fb090b","c2":"#000000"},{"id":"c14","n":"Napoli","s":"NAP","v":0,"div":"D2","c1":"#12a0d7","c2":"#ffffff"},{"id":"c15","n":"Juventus","s":"JUV","v":0,"div":"D2","c1":"#111111","c2":"#ffffff"},{"id":"c16","n":"Fenerbahce","s":"FEN","v":0,"div":"D2","c1":"#fcd116","c2":"#1a2a6c"},{"id":"c17","n":"Bayer Leverkusen","s":"B04","v":0,"div":"D3","c1":"#e32221","c2":"#000000"},{"id":"c18","n":"Flamengo","s":"FLA","v":0,"div":"D3","c1":"#d4001f","c2":"#000000"},{"id":"c19","n":"Porto","s":"POR","v":0,"div":"D3","c1":"#003893","c2":"#ffffff"},{"id":"c20","n":"Galatasaray","s":"GAL","v":0,"div":"D3","c1":"#e30613","c2":"#fdb913"},{"id":"c21","n":"Sporting Lisboa","s":"SCP","v":0,"div":"D3","c1":"#008057","c2":"#ffffff"},{"id":"c22","n":"Benfica","s":"BEN","v":0,"div":"D3","c1":"#e83030","c2":"#ffffff"},{"id":"c23","n":"Olympiakos","s":"OLY","v":0,"div":"D3","c1":"#d2122e","c2":"#ffffff"},{"id":"c24","n":"PSV Eindhoven","s":"PSV","v":0,"div":"D3","c1":"#e2001a","c2":"#ffffff"},{"id":"c25","n":"AS Monaco","s":"ASM","v":0,"div":"D4","c1":"#e51b24","c2":"#ffffff"},{"id":"c26","n":"Palmeiras","s":"PAL","v":0,"div":"D4","c1":"#006437","c2":"#ffffff"},{"id":"c27","n":"Ajax","s":"AJA","v":0,"div":"D4","c1":"#d2122e","c2":"#ffffff"},{"id":"c28","n":"Besiktas","s":"BES","v":0,"div":"D4","c1":"#111111","c2":"#ffffff"},{"id":"c29","n":"River Plate","s":"RIV","v":0,"div":"D4","c1":"#f2f2f2","c2":"#d4001f"},{"id":"c30","n":"São Paulo","s":"SAO","v":0,"div":"D4","c1":"#f2f2f2","c2":"#e31b23"},{"id":"c31","n":"Boca Juniors","s":"BOC","v":0,"div":"D4","c1":"#0a3a8a","c2":"#fcd116"},{"id":"c32","n":"Santos","s":"SAN","v":0,"div":"D4","c1":"#f2f2f2","c2":"#111111"},{"id":"c33","n":"Inter Miami","s":"MIA","v":0,"div":"NL","c1":"#f7b5cd","c2":"#231f20"},{"id":"c34","n":"Panathinaikos","s":"PAN","v":0,"div":"NL","c1":"#0b7a3b","c2":"#ffffff"},{"id":"c35","n":"Celtic","s":"CEL","v":0,"div":"NL","c1":"#138a4a","c2":"#ffffff"},{"id":"c36","n":"América","s":"AME","v":0,"div":"NL","c1":"#ffd200","c2":"#0a2a6c"},{"id":"c37","n":"Monterrey","s":"MTY","v":0,"div":"NL","c1":"#00205b","c2":"#ffffff"},{"id":"c38","n":"Copenhagen","s":"FCK","v":0,"div":"NL","c1":"#f2f2f2","c2":"#1f3a7a"},{"id":"c39","n":"Shakhtar Donetsk","s":"SHA","v":0,"div":"NL","c1":"#f68b1f","c2":"#000000"},{"id":"c40","n":"LA Galaxy","s":"LAG","v":0,"div":"NL","c1":"#00245d","c2":"#ffd200"}];
@@ -1209,7 +1226,7 @@ function moveTo(p,cid){ unrole(p,cid); if(p.club&&G.sq[p.club]) G.sq[p.club]=G.s
 
 // ---- obiettivo ----
 function expectedRank(cid){ var d=C(cid).div; var order=clubsOf(d).slice().sort(function(a,b){return teamOvr(b.id)-teamOvr(a.id);}); return order.findIndex(function(c){return c.id===cid;})+1; }
-function objectiveText(d,T){ if(T<=1) return "Vincere il campionato"; if(T<=2) return "Finire tra le prime due"+(d!=="D1"?" (promozione)":""); if(T<=4) return "Finire nelle prime quattro"; if(T<=6) return "Chiudere a metà classifica (almeno "+T+"°)"; return d==="NL"?"Chiudere il campionato":"Evitare la retrocessione"; }
+function objectiveText(d,T){ if(T<=1) return "Vincere il campionato"; if(T<=2) return "Finire tra le prime due"+(d!=="D1"?" (promozione)":""); if(T<=4) return "Finire nelle prime quattro"; if(T<=6) return "Salvezza"; return d==="NL"?"Evitare l'ultimo posto":"Evitare la retrocessione"; }
 
 // ---- inizio pre-stagione ----
 function nextDivOf(id){ var d=C(id).div,mv=G.sum&&G.sum.moves; if(mv&&!G.sum.mvDone) mv.forEach(function(m){ if(m[0]===id) d=m[2]; }); return d; }
@@ -1286,7 +1303,7 @@ function exitLocked(p){ return (p.fb&&G.season<p.fb)?p.fb:0; }
 function canRelease(p){ if(!p||p.club!==G.myId) return "Non è un tuo giocatore."; if(!(G.phase==="pre"||G.endStage==="post")) return "Svincoli possibili solo in PRESEASON e POSTSEASON."; if(exitLocked(p)) return "Preso dagli svincolati: né svincolabile né cedibile fino alla PRESEASON della stagione "+p.fb+"."; if(p.acq===G.season) return "Acquistato in questa stagione: svincolabile dalla prossima."; if(lim().rel>=3) return "Limite raggiunto: 3 svincoli per finestra."; if(squadOf(G.myId).length<=SQ_MIN) return "Rosa minima: "+SQ_MIN+" giocatori."; return gkBlock(p); }
 function gkBlock(p){ if(p&&p.club===G.myId&&p.p==="P"&&roleCount(G.myId,"P")<=ROLE_MIN.P) return "Servono almeno "+ROLE_MIN.P+" portieri."; return ""; }
 function letGoBlock(p){ if(!p||p.club!==G.myId) return ""; if(squadOf(G.myId).length<=SQ_MIN) return "Rosa minima: "+SQ_MIN+" giocatori. Rinnova il contratto."; return gkBlock(p); }
-// acquisto utente: offerta >= prezzo accettata; fino al -20% può essere rifiutata
+// acquisto utente: offerta >= prezzo accettata; -10% accettata al 60%, -25% al 25%; oltre -25% non valida
 function buyPlayer(pid,offer){
   var me=C(G.myId),p=G.players[pid]; if(!p) return {ok:false,msg:"Giocatore non trovato."};
   if(G.phase!=="pre") return {ok:false,msg:"Mercato chiuso."};
@@ -1297,7 +1314,7 @@ function buyPlayer(pid,offer){
   if(!p.club){ offer=price; if(lim().buy>=3&&squadOf(G.myId).length>=SQ_MIN) return {ok:false,msg:"Limite raggiunto: 3 acquisti da lista svincolati per PRESEASON."}; }
   if(offer>me.bal+1e-9) return {ok:false,msg:"Saldo insufficiente."};
   if(p.club){ var sq=squadOf(p.club); if(sq.length<=20||roleCount(p.club,p.p)<=ROLE_MIN[p.p]) return {ok:false,msg:"Il club non può cedere il giocatore."}; }
-  if(p.club&&offer<price){ var ratio=offer/price; if(ratio<.8) {G.market.locked[pid]=1; return {ok:false,msg:"Offerta troppo bassa: rifiutata."};} var pa=1-(1-ratio)*4; if(rnd()>pa){ G.market.locked[pid]=1; return {ok:false,msg:"Il club ha rifiutato l'offerta."}; } }
+  if(p.club&&offer<price-1e-9){ var ratio=offer/price; if(ratio<.75-.002) return {ok:false,msg:"Offerta non valida: sconto massimo 25%."}; var pa=ratio>=.9-.002?.6:.25; if(rnd()>pa){ G.market.locked[pid]=1; return {ok:false,msg:"Il club ha rifiutato l'offerta."}; } }
   var pfrom=p.club, pay=offer; me.bal-=pay; if(p.club) C(p.club).bal+=pay; addTx("buy",p,p.club,pay); moveTo(p,G.myId); p.ct=contractYears(p.ovr); p.cond=Math.max(p.cond,4); p.acq=G.season; if(!pfrom){ p.fb=G.season+2; lim().buy++; }
   return {ok:true,msg:p.n+" acquistato per "+fm(pay)+"."}; }
 function legPrice(p){ return p.club?p.lpc:p.lpf; }
@@ -1408,6 +1425,8 @@ function endSeasonCompute(){
   var relegated=false; for(var m=0;m<moves.length;m++){ if(moves[m][0]===me&&moves[m][2]===DIVS[DIVS.indexOf(moves[m][1])+1]) relegated=true; }
   var promoted=moves.some(function(x){return x[0]===me&&DIVS.indexOf(x[2])<DIVS.indexOf(x[1]);});
   var out="ok";
+  if(!relegated&&(T===5||T===6)) d=Math.max(d,0); // Salvezza: basta non retrocedere (anche 6ª con spareggio vinto)
+  if(mc.div==="NL"&&T>=7) d=(pos===8)?-2:Math.max(d,0); // NL: ultimo posto = obiettivo mancato
   if(relegated) out="esonero"; else if(d>=2) out="premio"; else if(d>=0) out="raggiunto"; else if(d===-1) out="sufficiente"; else out="avviso";
   S.obj={T:T,pos:pos,d:d,out:out,relegated:relegated,promoted:promoted};
   // bonus sponsor solo se l'obiettivo e' raggiunto
@@ -1431,7 +1450,7 @@ function expectedRankAtEnd(cid){ return _exp0[cid]||4; }
 // liquidazione di fine stagione di un club. al=null -> IA
 function settleClub(cid,defer){
   var c=C(cid),pz=G.sum.prize[cid],tot=pz.total+pz.bonus,wb=wageBill(cid),ge=gestCost(c.div,squadOf(cid).length),x=infExtra(cid),
-    info={sold:[],pen:false,inc:tot+x.gain,wages:wb,gest:ge+x.maint,svc:x.gain,mnt:x.maint};
+    info={sold:[],pen:false,inc:tot+x.gain,wages:wb,gest:ge+x.maint,svc:x.gain,mnt:x.maint,b0:c.bal};
   c.bal+=tot+x.gain-wb-ge-x.maint; c.lastInfo=info;
   if(!defer) applyNegative(cid,info);
   if(cid!==G.myId){ var qs=incQuota(c.div)+(c.spons==="B"?spR(c.div)[0]:spN(c.div)); infAi(cid,tot+x.gain-wb-ge-x.maint+qs); }
@@ -1570,25 +1589,40 @@ function infInjMul(cid){ return [1,.85,.70][infLv(cid,"te")-1]; }
 function infDurMul(cid){ return [1,.75,.50][infLv(cid,"cm")-1]; }
 function infFitMul(cid){ return cid?[1,.75,.50][infLv(cid,"cs")-1]:1; }
 function infStkThr(cid){ return [3,4,6][infLv(cid,"pa")-1]; }
-function infStarsTxt(S){ var h=Math.round(S*2)/2,full=Math.floor(h),half=(h-full)>=.5?1:0,s=""; for(var i=0;i<5;i++) s+=i<full?"★":"☆"; return s+(half?"½":""); }
+function infStarsTxt(S){ var h=Math.floor(Math.round(S*10)/10*2+1e-9)/2,full=Math.floor(h),half=(h-full)>=.5?1:0,s=""; for(var i=0;i<5;i++) s+=i<full?"★":(i===full&&half?'<span class="hs">☆<i>★</i></span>':"☆"); return '<span class="gst">'+s+'</span>'; }
 // ---- UI: scheda Club ----
 function infCard(){ return infCard1(false)+infCard1(true); }
-function infCard1(sport){ var me=G.myId,S=G.stars[me],T=infTarget(me),pre=G.phase==="pre";
-  var f1=function(x){ return "€"+(Math.round(x*100)/100).toFixed(2)+"M"; };
-  var h='<div class="card"><div class="ct">'+(sport?'🏗️ Infrastrutture':'🏟️ Stadio e servizi')+'</div>'+(sport?'':'<div class="row tk"><span class="sp">Reputazione del club</span><b>'+infStarsTxt(S)+' <span class="mut">'+S.toFixed(1)+'</span></b></div>'+(Math.abs(T-S)>=.25?'<div class="mut" style="margin:-2px 0 8px">A regime: '+infStarsTxt(T)+' '+T.toFixed(1)+'</div>':''));
+function infM(x){ return "€"+(Math.round(x*100)/100).toFixed(2)+"M"; }
+function infPct(t){ return esc(t).replace(/([−+]\d+%)/,'<span class="ok">$1</span>'); }
+function infSt(me,d,l){ var cg=infGainAt(me,d,l),cm=infMaintAt(me,d,l),cs=l>=2?d.v[l-2][3]:0; return {cg:cg,cm:cm,cs:cs,ef:(d.t==="x"&&l>=2)?d.e[l-2]:null}; }
+function infCurTags(me,d,l){ var c=infSt(me,d,l),t="";
+  if(c.ef) t+='<span class="svt">'+infPct(c.ef)+'</span>';
+  if(d.t!=="x"&&c.cg>0.004) t+='<span class="svt">Incasso <span class="ok">+'+infM(c.cg)+'</span></span>';
+  if(c.cs>0) t+='<span class="svt">Stelle <span class="ok">+'+c.cs.toFixed(1)+'</span></span>';
+  if(c.cm>0.004) t+='<span class="svt">Manutenzione <span class="ko">+'+infM(c.cm)+'</span></span>';
+  return t||'<span class="svt">Nessun effetto</span>'; }
+function infNextTags(me,d,l){ var c=infSt(me,d,l),n=infSt(me,d,l+1),t="",dg=n.cg-c.cg,dm=n.cm-c.cm,ds=n.cs-c.cs;
+  if(n.ef) t+='<span class="svt">'+infPct(n.ef)+'</span>';
+  if(d.t!=="x"&&dg>0.004) t+='<span class="svt">Incasso <span class="ok">+'+infM(dg)+'</span></span>';
+  if(ds>0.004) t+='<span class="svt">Stelle <span class="ok">+'+ds.toFixed(1)+'</span></span>';
+  if(dm>0.004) t+='<span class="svt">Manutenzione <span class="ko">+'+infM(dm)+'</span></span>';
+  return t; }
+function infCard1(sport){ var me=G.myId,S=G.stars[me],pre=G.phase==="pre";
+  var h='<div class="card"><div class="ct">'+(sport?'🏗️ Infrastrutture':'🏟️ Stadio e servizi')+'</div>'+(sport?'':'<div class="row tk"><span class="sp">Reputazione del club</span><b>'+infStarsTxt(S)+' <span class="mut">'+S.toFixed(1)+'</span></b></div>');
   INF.forEach(function(d){ if((d.t==="x")!==sport) return; var l=infLv(me,d.k),pips="";
     for(var i=1;i<=3;i++) pips+='<i class="'+(i<=l?"on":"")+'"></i>';
-    var nx=l<3, cost=nx?infCost(me,d.k):0, ok=pre&&nx&&freeBal(me)>=cost, dg=nx?infGainAt(me,d,l+1)-infGainAt(me,d,l):0, dm=nx?infMaintAt(me,d,l+1)-infMaintAt(me,d,l):0, ds=nx?d.v[l-1][3]-(l>=2?d.v[l-2][3]:0):0;
-    var tags=nx?('<span class="svt">'+(d.t==="x"?esc(d.e[l-1]):dg>0.004?'Incasso +'+f1(dg):'Nessun incasso diretto')+'</span><span class="svt">Manutenzione +'+f1(dm)+'</span>'+(ds>0?'<span class="svt">Stelle +'+ds.toFixed(1)+'</span>':'')):'<span class="svt on">Livello massimo</span>';
-    h+='<div class="svr"><div class="svi">'+d.ic+'</div><div class="svb"><b>'+d.n+'</b> <span class="svp">'+pips+'</span><div class="svd">'+esc(d.lv[l-1])+' · '+esc(d.tx)+'</div><div>'+tags+'</div></div>'+
-       (nx?'<button class="svbtn'+(ok?"":" off")+'" onclick="infAsk(\''+d.k+'\')">'+(nx?esc(d.lv[l]):"")+'<br><small>'+fm(cost)+'</small></button>':'')+'</div>'; });
+    var nx=l<3, cost=nx?infCost(me,d.k):0, ok=pre&&nx&&freeBal(me)>=cost;
+    h+='<div class="svr c"><div class="svh"><div class="svi">'+d.ic+'</div><b>'+d.n+'</b> <span class="svp">'+pips+'</span></div><div class="svc">'+
+       '<div><div class="svl"><b>Attuale</b> · '+esc(d.lv[l-1])+'</div>'+infCurTags(me,d,l)+'</div>'+
+       (nx?'<div><div class="svl"><b>Migliora</b> · '+esc(d.lv[l])+'</div>'+infNextTags(me,d,l)+'<button class="svbtn w'+(ok?"":" off")+'" onclick="infAsk(\''+d.k+'\')">'+esc(d.lv[l])+' · '+fm(cost)+'</button></div>':'<div class="svtop"><span class="svt top">Al top</span></div>')+'</div></div>'; });
   h+='<div class="mut" style="margin-top:8px;font-size:12px">Si investe in PRESEASON e il costo esce subito dal budget. '+(sport?'Gli effetti valgono subito. La manutenzione si registra a fine stagione.':'Incassi e manutenzione si registrano a fine stagione. Le stelle salgono al massimo di mezza stella a stagione.')+'</div></div>';
   return h; }
 function infAsk(k){ var me=G.myId,d=infDef(k),l=infLv(me,k); if(l>=3) return;
   if(G.phase!=="pre"){ toast("Puoi investire solo in PRESEASON."); return; }
   var cost=infCost(me,k); if(freeBal(me)<cost){ toast("Budget insufficiente: servono "+fm(cost)+" (budget "+fm(freeBal(me))+")."); return; }
-  var dg=infGainAt(me,d,l+1)-infGainAt(me,d,l),dm=infMaintAt(me,d,l+1)-infMaintAt(me,d,l);
-  cf('Costruire <b>'+esc(d.lv[l])+'</b> ('+d.n+') per <b>'+fm(cost)+'</b>?<div class="mut" style="margin-top:8px">'+(d.t==="x"?esc(d.e[l-1])+' · ':dg>0.004?'Incasso stimato +'+fm(dg)+' all\'anno · ':'')+'Manutenzione +'+fm(dm)+' all\'anno</div>',function(){ var e=infBuy(k); if(e){ toast(e); return; } saveGame(); render(); },"Costruisci"); }
+  var lb=function(t){ return '<div class="svl" style="margin:10px 0 2px"><b>'+t+'</b></div>'; };
+  var m=lb('Prima')+infCurTags(me,d,l)+lb('Dopo')+infCurTags(me,d,l+1);
+  cf('Costruire <b>'+esc(d.lv[l])+'</b> ('+d.n+') per <b>'+fm(cost)+'</b>?<div style="margin-top:6px">'+m+'</div>',function(){ var e=infBuy(k); if(e){ toast(e); return; } saveGame(); render(); },"🏗️ Costruisci"); }
 
 // ===== interfaccia: helper e pagine =====
 var UI={page:"home",sel:null,mk:{role:"",q:"",sort:"ovr",afford:false,div:""},st:{div:"D1",tab:"lega"},al:{mode:"sto",comp:"lg:D1",aw:"gs",div:"D1"},sq:{role:""},fast:false};
@@ -1918,16 +1952,16 @@ function pgMarket(){
   if(G.expiring&&G.expiring.length){ h+='<div class="card"><div class="ct">📝 Contratti in scadenza</div>'+G.expiring.map(function(id){ var p=G.players[id]; if(!p) return ""; return '<div class="row" style="padding:5px 0"><div class="sp"><div class="pn">'+esc(p.n)+' <span class="mut">'+p.p+' · '+ageA(p)+' · OVR '+p.ovr+'</span></div><div class="ps">stipendio '+fm(p.w)+'/anno</div></div><button class="btn sm" onclick="doRenew(\''+id+'\',true)">✍️ Rinnova · −'+fm(renewCost(p))+'</button><button class="btn g sm" onclick="doRenew(\''+id+'\',false)">Svincola</button></div>'; }).join("")+'<button class="btn g w" style="margin-top:8px" onclick="renewAll()">✍️ Rinnova tutti · −'+fm(sum(G.expiring,function(id){ return G.players[id]?renewCost(G.players[id]):0; }))+'</button></div>'; }
   h+=legendsHtml();
   var f=UI.mk;
-  h+='<div class="card"><input type="search" placeholder="🔎 Cerca giocatore o squadra" value="'+esc(f.q)+'" onchange="UI.mk.q=this.value;render()"><div class="chips one" style="margin-top:8px"><button class="chip '+(!f.role?"on":"")+'" onclick="UI.mk.role=\'\';UI.mk.rs=\'\';render()">Tutti</button>'+ROLE_CHIPS.map(function(r){ return '<button class="chip '+(f.role===r?"on "+(f.rs==="s"?"g2":"g1"):"")+'" onclick="mkRole(\''+r+'\')">'+r+'</button>'; }).join("")+'</div>'+
+  h+='<div class="card"><input type="search" placeholder="🔎 Cerca giocatore o squadra" value="'+esc(f.q)+'" onchange="UI.mk.q=this.value;render()"><div class="chips one" style="margin-top:8px"><button class="chip '+(!f.role?"on":"")+'" onclick="UI.mk.role=\'\';UI.mk.rs=\'\';render()">Tutti</button>'+ROLE_CHIPS.map(function(r){ return '<button class="chip '+(f.role===r?"on "+(f.rs==="b"?"g3":f.rs==="s"?"g2":"g1"):"")+'" onclick="mkRole(\''+r+'\')">'+r+'</button>'; }).join("")+'</div>'+
     '<div class="row"><button class="chip '+(f.st==="fa"?"on":"")+'" onclick="UI.mk.st=UI.mk.st===\'fa\'?\'\':\'fa\';render()">Svincolati</button><button class="chip '+(f.st==="ct"?"on":"")+'" onclick="UI.mk.st=UI.mk.st===\'ct\'?\'\':\'ct\';render()">Con contratto</button><button class="chip '+(f.afford?"on":"")+'" onclick="UI.mk.afford=!UI.mk.afford;render()">Nel budget</button><button class="chip '+(f.sort==="ovr"?"on":"")+'" onclick="mkSort(\'ovr\')">OVR'+sortAr(f,"ovr")+'</button><button class="chip '+(f.sort==="v"?"on":"")+'" onclick="mkSort(\'v\')">Prezzo'+sortAr(f,"v")+'</button></div></div>';
   var pool=[]; for(var cid in G.sq){ if(cid===G.myId) continue; G.sq[cid].forEach(function(p){ if(!p.leg) pool.push(p); }); } G.fa.forEach(function(p){ pool.push(p); });
-  if(f.role) pool=pool.filter(function(p){ return f.rs==='s'?p.p2===f.role:p.p===f.role; });
+  if(f.role) pool=pool.filter(function(p){ return f.rs==='b'?(p.p===f.role||p.p2===f.role):f.rs==='s'?p.p2===f.role:p.p===f.role; });
   if(f.st==='fa') pool=pool.filter(function(p){return !p.club;}); else if(f.st==='ct') pool=pool.filter(function(p){return !!p.club;});
   if(f.q){ var q=f.q.toLowerCase(); pool=pool.filter(function(p){ return p.n.toLowerCase().indexOf(q)>=0||(p.club&&C(p.club).n.toLowerCase().indexOf(q)>=0); }); }
   if(f.afford) pool=pool.filter(function(p){ return buyPrice(p)<=fr; });
   var dir=f.dir==='a'?-1:1; pool.sort(function(a,b){ return dir*(f.sort==="v"?buyPrice(b)-buyPrice(a):b.ovr-a.ovr); });
   var sig=[f.role,f.rs,f.st,f.afford,f.sort,f.dir,f.q].join("|"); if(f.sig!==sig){ f.sig=sig; f.n=60; } var nsh=f.n||60;
-  h+='<div class="mut" style="margin-bottom:6px">'+pl(pool.length,'giocatore','giocatori')+(f.role?(f.rs==="s"?" · ruolo secondario":" · ruolo primario"):"")+'</div><div class="card" style="padding:4px 10px">'+pool.slice(0,nsh).map(function(p){ return '<div class="pl" style="grid-template-columns:58px 1fr auto auto">'+rbHtml(p)+'<div style="min-width:0" onclick="showPlayer(\''+p.id+'\')"><div class="pn">'+esc(p.n)+'</div><div class="ps">'+(p.club?crest(p.club,12)+" "+esc(C(p.club).s):"Svincolato")+' · '+ageA(p)+' · stip. '+fm(p.w)+'</div></div><div><div class="ov '+ovCls(p.ovr)+'">'+p.ovr+'</div></div><button class="btn sm" onclick="askBuy(\''+p.id+'\')">'+(lockedFor(p)?"Bloccato":fm(buyPrice(p)))+'</button></div>'; }).join("")+'</div>'+(pool.length>nsh?'<button class="btn g w" style="margin-top:8px" onclick="UI.mk.n=(UI.mk.n||60)+60;render()">Mostra altri</button>':'');
+  h+='<div class="mut" style="margin-bottom:6px">'+pl(pool.length,'giocatore','giocatori')+(f.role?(f.rs==="b"?" · ruolo primario o secondario":f.rs==="s"?" · ruolo secondario":" · ruolo primario"):"")+'</div><div class="card" style="padding:4px 10px">'+pool.slice(0,nsh).map(function(p){ return '<div class="pl" style="grid-template-columns:58px 1fr auto auto">'+rbHtml(p)+'<div style="min-width:0" onclick="showPlayer(\''+p.id+'\')"><div class="pn">'+esc(p.n)+'</div><div class="ps">'+(p.club?crest(p.club,12)+" "+esc(C(p.club).s):"Svincolato")+' · '+ageA(p)+' · stip. '+fm(p.w)+'</div></div><div><div class="ov '+ovCls(p.ovr)+'">'+p.ovr+'</div></div><button class="btn sm" onclick="askBuy(\''+p.id+'\')">'+(lockedFor(p)?"Bloccato":fm(buyPrice(p)))+'</button></div>'; }).join("")+'</div>'+(pool.length>nsh?'<button class="btn g w" style="margin-top:8px" onclick="UI.mk.n=(UI.mk.n||60)+60;render()">Mostra altri</button>':'');
   var blocked=G.expiring&&G.expiring.length;
   h+=mktBtns();
   return h; }
@@ -1938,9 +1972,12 @@ function askLegend(pid){ var p=G.players[pid],b=legBlock(p),pr=legPrice(p);
   modal(pSheetTop(p)+'<div class="buy"><div class="brow"><span>Prezzo (fisso)</span><b>'+fm(pr)+'</b></div><div class="brow"><span>Stipendio</span><b>'+fm(0)+'</b></div><div class="brow"><span>Saldo dopo l\'acquisto</span><b>'+fm(C(G.myId).bal-pr)+'</b></div>'+(b?'<div class="ko bnote">'+b+'</div>':'')+'</div><div class="row" style="margin-top:12px"><button class="btn g sp" onclick="closeModal()">Annulla</button><button class="btn sp" '+(b?"disabled":"")+' onclick="doLegend(\''+pid+'\')">✍️ Acquista</button></div>',true); }
 function doLegend(pid){ var r=buyLegend(pid); saveGame(); modal('<div style="text-align:center;padding:8px" class="'+(r.ok?"ok":"ko")+'">'+esc(r.msg)+'</div><button class="btn w" style="margin-top:12px" onclick="closeModal();render()">OK</button>'); render(); }
 function buyBlock(p){ if(lockedFor(p)) return "Svincolato da te: riacquistabile dalla stagione "+p.lk.s+"."; if(!p.club&&lim().buy>=3&&squadOf(G.myId).length>=SQ_MIN) return "Limite raggiunto: 3 acquisti da lista svincolati per PRESEASON."; if(squadOf(G.myId).length>=SQ_MAX) return "Rosa piena (max "+SQ_MAX+")."; return ""; }
-function askBuy(pid){ var p=G.players[pid],pr=buyPrice(p),blk=buyBlock(p);
+var BUY_OPT=[["Prezzo pieno",1,"Accettata subito."],["−10%",.9,"Il club accetta con probabilità del 60%."],["−25%",.75,"Il club accetta con probabilità del 25%."]];
+function buyPick(i){ var p=G.players[UI.buyPid],pr=buyPrice(p),o=BUY_OPT[i]; $("offer").value=(i===0?pr:Math.round(pr*o[1]*100)/100); var cs=document.querySelectorAll("#bchips .chip"); for(var k=0;k<cs.length;k++) cs[k].className="chip"+(k===i?" on":""); $("bprob").textContent=o[2]+(i?" Se rifiuta, non potrai riprovare in questa PRESEASON.":""); buyHint(); }
+function askBuy(pid){ var p=G.players[pid],pr=buyPrice(p),blk=buyBlock(p); UI.buyPid=pid;
   modal(pSheetTop(p)+'<div class="buy">'+
-    (p.club?'<div class="brow"><span>Prezzo richiesto</span><b>'+fm(pr)+'</b></div><div class="brow"><span>La tua offerta (M€)</span><input type="number" id="offer" step="0.01" value="'+pr+'" oninput="buyHint()"></div><div class="mut bnote">Sotto il prezzo l\'offerta può essere rifiutata (minimo 80%).</div>':
+    (p.club?'<div class="brow"><span>Prezzo richiesto</span><b>'+fm(pr)+'</b></div><div class="brow"><span>La tua offerta (M€)</span><input type="number" id="offer" step="0.01" value="'+pr+'" readonly class="ro"></div>'+
+      '<div class="row bch" id="bchips">'+BUY_OPT.map(function(o,i){ return '<button class="chip'+(i===0?' on':'')+'" onclick="buyPick('+i+')">'+o[0]+'<br><small>'+fm(i===0?pr:Math.round(pr*o[1]*100)/100)+'</small></button>'; }).join('')+'</div><div class="mut bnote" id="bprob">'+BUY_OPT[0][2]+'</div>':
       '<div class="brow"><span>Costo (25% del valore)</span><b>'+fm(pr)+'</b></div><input type="number" id="offer" value="'+pr+'" style="display:none">')+
     '<div class="brow"><span>Budget dopo l\'acquisto</span><b id="bhint"></b></div><div id="bwarn" class="ko bnote"></div>'+(blk?'<div class="ko bnote">'+blk+'</div>':'')+'</div>'+
     '<div class="row" style="margin-top:12px"><button class="btn g sp" onclick="closeModal()">Annulla</button><button class="btn sp" '+(blk?"disabled":"")+' onclick="doBuy(\''+pid+'\')">🤝 Offri</button></div>',true); buyHint(); }
@@ -1949,7 +1986,7 @@ function doBuy(pid){ var o=parseFloat($("offer").value)||0; var r=buyPlayer(pid,
 function doRenew(pid,y){ var m=renewPlayer(pid,y); if(typeof m==="string") toast(m); saveGame(); render(); }
 function renewAll(){ var msg=""; G.expiring.slice().forEach(function(id){ var m=renewPlayer(id,true); if(typeof m==="string") msg=m; }); if(msg) toast(msg); saveGame(); render(); }
 function sortAr(f,k){ return f.sort===k?'<span class="ar">'+(f.dir==='a'?'▲':'▼')+'</span>':''; }
-function mkRole(r){ var f=UI.mk; if(f.role!==r){ f.role=r; f.rs='p'; } else if(f.rs!=='s'){ f.rs='s'; } else { f.role=''; f.rs=''; } render(); }
+function mkRole(r){ var f=UI.mk; if(f.role!==r){ f.role=r; f.rs='p'; } else if(f.rs==='p'){ f.rs='s'; } else if(f.rs==='s'){ f.rs='b'; } else { f.role=''; f.rs=''; } render(); }
 function mkSort(k){ var f=UI.mk; if(f.sort===k) f.dir=(f.dir==='a'?'d':'a'); else { f.sort=k; f.dir='d'; } render(); }
 function mktNext(){ marketNext(); saveGame(); render(); }
 function offAns(id,yes){ answerOfferId(id,yes); saveGame(); render(); }
@@ -2283,7 +2320,7 @@ function guideHtml(){
     ["Il saldo",["Hai un solo saldo, come un conto in banca. A inizio stagione incassi la quota della divisione e quella del partner commerciale. Le cessioni incassano subito; premi e ricavi dei servizi arrivano a fine stagione, quando si pagano anche stipendi e spese di gestione. Nella scheda Club vedi la previsione del saldo."]],
     ["Il partner commerciale",["All'inizio di ogni stagione scegli tra due partner. Il <b>partner internazionale</b> paga tutto subito. Il <b>partner nazionale</b> (globale in D1) paga meno subito ma dà un bonus a fine stagione se raggiungi l'obiettivo.","Esempio in D1: internazionale 50 M subito; globale 35 M subito più 35 M di bonus. In D2: 25 M contro 20 M + 15 M. In D3: 15 contro 10 + 12. In D4: 12,5 contro 7,5 + 10. In Non-League: 10 contro 7 + 8."]],
     ["Premi di fine stagione",["Il monte premi di campionato si divide per posizione: dal 1° all'8° posto prende il 25, 18, 15, 12, 10, 8, 7 e 5%. La coppa paga di più a chi va avanti: vincitrice 10% del reddito di divisione, finalista 5%, semifinalista 2,5%, ai quarti 1%.","In Champions: 1,5 M per il girone più 0,8 M a vittoria e 0,4 M a pareggio, poi +2 M agli ottavi, +3 ai quarti, +5 in semifinale, +8 in finale e +14 per chi vince."]],
-    ["Obiettivo del presidente",["A inizio stagione il presidente fissa una posizione da raggiungere in base alla forza del club. A fine stagione l'esito è: <b>superato</b> (2 o più posti meglio), <b>raggiunto</b>, <b>sufficiente</b> (1 posto peggio, nessuna conseguenza) o <b>mancato</b> (2 o più peggio: avvertimento).","Il bonus del partner nazionale si incassa solo se superi o raggiungi l'obiettivo."]],
+    ["Obiettivo del presidente",["A inizio stagione il presidente fissa una posizione da raggiungere in base alla forza del club. A fine stagione l'esito è: <b>superato</b> (2 o più posti meglio), <b>raggiunto</b>, <b>sufficiente</b> (1 posto peggio, nessuna conseguenza) o <b>mancato</b> (2 o più peggio: avvertimento).","<b>Salvezza</b> vale se non retrocedi (anche da 6° se vinci lo spareggio). In NL le due squadre più deboli hanno <b>Evitare l'ultimo posto</b>: chiudere ultimi è obiettivo mancato.","Il bonus del partner nazionale si incassa solo se superi o raggiungi l'obiettivo."]],
     ["Obiettivo extra",["Quando scegli il partner puoi sommare un obiettivo extra facoltativo: vincere la coppa, vincere la Champions (in D1) o passare il girone (nelle altre divisioni), miglior difesa, miglior attacco, miglior differenza reti, imbattuti in casa o nessuna espulsione in campionato. Se lo centri incassi un premio pari al 3% del reddito della divisione; se lo manchi non perdi nulla."]],
     ["Esonero",["Vieni esonerato se retrocedi, oppure se prendi due avvertimenti consecutivi. Raggiungere l'obiettivo azzera gli avvertimenti. Dopo l'esonero scegli un nuovo club tra quelli che ti vogliono (dipende dalla reputazione) oppure ti ritiri."]],
     ["Saldo in rosso",["Se dopo la POSTSEASON il saldo è negativo, il club vende d'ufficio al 75% del valore i giocatori più pagati finché il saldo torna positivo o la rosa scende a 18. Non vengono mai venduti d'ufficio i portieri se te ne resterebbero meno di 2. Se non basta, il debito si azzera ma la stagione dopo parti con 5 punti di penalità."]]
@@ -2341,7 +2378,7 @@ function endHtml(){ var S=G.sum,st=G.endStage,c=mineClub(),h="";
   if(false){}
   else if(st==="result"){ var o2=S.obj,inf=S.info,pz=S.prize[G.myId],tot=pz.total+pz.bonus;
     h+='<div class="sec-t">Stagione '+G.season+' conclusa</div><div class="card"><div class="big">'+o2.pos+'°</div><div class="mut">Obiettivo: '+esc(G.obj.text)+'</div><div style="margin-top:8px;font-weight:600" class="'+((o2.out==="premio"||o2.out==="raggiunto")?"ok":(o2.out==="sufficiente"?"wa":"ko"))+'">'+OUT_TXT[o2.out]+'</div>'+(o2.promoted||o2.pos===1?'<div class="ok" style="margin-top:6px">'+(o2.pos===1?'🥇 Titolo ':"")+(o2.promoted?'▲ Promozione!':"")+'</div>':"")+(o2.relegated?'<div class="ko" style="margin-top:6px">▼ Retrocessione</div>':"")+(S.why?'<div class="ko">'+S.why+'</div>':"")+'</div>';
-    h+='<div class="card"><div class="ct">📊 Conti della stagione</div><div class="row tk"><span class="sp">Premio campionato</span><b>'+fm(pz.league)+'</b></div><div class="row tk"><span class="sp">Premio coppa</span><b>'+fm(pz.cup)+'</b></div><div class="row tk"><span class="sp">Premio Champions</span><b>'+fm(pz.ch)+'</b></div><div class="row tk"><span class="sp">Bonus partner commerciale'+(c.spons==="B"?(pz.bonus>0?"":" (obiettivo mancato)"):" (nessuno)")+'</span><b>'+fm(pz.bonus)+'</b></div>'+(S.xo?'<div class="row tk"><span class="sp">🎯 Obiettivo extra: '+esc(S.xo.text)+'</span><b class="'+(S.xo.ok?"ok":"ko")+'">'+(S.xo.ok?fm(S.xo.prize):"mancato")+'</b></div>':"")+''+(inf.svc>0.004?'<div class="row tk"><span class="sp">Servizi dello stadio</span><b class="ok">+'+fm(inf.svc)+'</b></div>':"")+'<div class="row tk"><span class="sp">Stipendi pagati</span><b class="ko">−'+fm(inf.wages)+'</b></div><div class="row tk"><span class="sp">Spese di gestione</span><b class="ko">−'+fm(inf.gest||0)+'</b></div><div class="row" style="padding-top:6px"><span class="sp"><b>Saldo finale</b></span><b class="'+(c.bal<0?"ko":"ok")+'">'+fm(c.bal)+'</b></div></div>';
+    h+='<div class="card"><div class="ct">📊 Conti della stagione</div>'+(typeof inf.b0==="number"?'<div class="row tk"><span class="sp"><b>Saldo di partenza</b></span><b>'+fm(inf.b0)+'</b></div>':'')+'<div class="row tk"><span class="sp">Premio campionato</span><b>'+fm(pz.league)+'</b></div><div class="row tk"><span class="sp">Premio coppa</span><b>'+fm(pz.cup)+'</b></div><div class="row tk"><span class="sp">Premio Champions</span><b>'+fm(pz.ch)+'</b></div><div class="row tk"><span class="sp">Bonus partner commerciale'+(c.spons==="B"?(pz.bonus>0?"":" (obiettivo mancato)"):" (nessuno)")+'</span><b>'+fm(pz.bonus)+'</b></div>'+(S.xo?'<div class="row tk"><span class="sp">🎯 Obiettivo extra: '+esc(S.xo.text)+'</span><b class="'+(S.xo.ok?"ok":"ko")+'">'+(S.xo.ok?fm(S.xo.prize):"mancato")+'</b></div>':"")+''+(inf.svc>0.004?'<div class="row tk"><span class="sp">Servizi dello stadio</span><b class="ok">+'+fm(inf.svc)+'</b></div>':"")+'<div class="row tk"><span class="sp">Stipendi pagati</span><b class="ko">−'+fm(inf.wages)+'</b></div><div class="row tk"><span class="sp">Spese di gestione</span><b class="ko">−'+fm(inf.gest||0)+'</b></div><div class="row" style="padding-top:6px"><span class="sp"><b>Saldo finale</b></span><b class="'+(c.bal<0?"ko":"ok")+'">'+fm(c.bal)+'</b></div></div>';
     if(S.trophies.length) h+='<div class="card"><div class="ct">🏆 Trofei</div>'+S.trophies.map(function(t){return '<div class="tk">🏆 '+esc(t)+'</div>';}).join("")+'</div>';
     if(c.bal<0) h+='<div class="card"><div class="ct ko">🚨 SALDO IN ROSSO</div><div class="tk">'+(S.fired?"Vendita forzosa al 75% del valore; se non basta, debito azzerato e −5 punti.":"Hai la POSTSEASON per svincolare giocatori (50% del valore, max 3) e rientrare in positivo.")+'</div>'+(inf.sold.length?'<div class="tk">Venduti d\'ufficio: '+inf.sold.map(esc).join(", ")+'</div>':"")+'</div>';
     h+='<div class="card mut">Reputazione: <b>'+G.rep+'/100</b> ('+(S.dr>=0?"+":"")+S.dr+')'+(G.warn?' · avvertimenti '+G.warn+'/2':"")+'</div>';
